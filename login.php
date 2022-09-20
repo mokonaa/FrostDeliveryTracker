@@ -3,6 +3,7 @@
 
 <head>
     <?php include("php/head.php")?>
+    <title></title>
 </head>
 
 <body>

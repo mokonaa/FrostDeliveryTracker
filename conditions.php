@@ -2,7 +2,9 @@
 <html lang="fr">
 
 <head>
+<meta charset="UTF-8">
     <?php include("php/head.php")?>
+    <title></title>
 </head>
 
 <body>
