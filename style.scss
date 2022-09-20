@@ -89,6 +89,9 @@ header {
     }
 
     nav {
+        width: 80%;
+        display: flex;
+        justify-content: flex-end;
 
         a {
             margin: 0 50px 0 0;
@@ -98,6 +101,10 @@ header {
         a:hover {
             border-bottom: 1px solid var(--color-blue);
         }
+    }
+
+    .user-login {
+        width: 40px;
     }
 }
 
@@ -183,3 +190,6 @@ footer {
         margin-top: 50px;
     }
 }
+
+
+.conditions-generales {}
