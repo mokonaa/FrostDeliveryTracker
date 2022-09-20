@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>EDT - Détails du colis</title>
+  <link rel="stylesheet" href="DetailsColis_style.css">
+</head>
+<body>
+    <!---- Header à inclure ---->
+
+    <div id="container">
+        <div>
+            <h1 id="title">
+                <img id="title_pic" src="box.png" alt="icon d'un colis" />
+                Détails du colis
+            </h1>
+        </div>
+        <div>Vous retrouverez sur cette page toutes les informations concernant votre colis.</div>
+    
+        <!--- Détails--->
+        <div id='containerInfos'>
+            <div class="singleInfo">
+                <p>ID : </p>
+                <p>XXXXXX</p>
+            </div>
+            <div class="singleInfo">
+                <p>Fournisseur : </p>
+                <p>XXXXXX</p>
+            </div>
+            <div class="singleInfo">
+                <p>Destinataire : </p>
+                <p>XXXXXX</p>
+            </div>
+            <div class="singleInfo">
+                <p>Heure de départ : </p>
+                <p>XX : XX</p>
+            </div>
+            <div>
+                <div class="singleInfo">
+                    <p>Plage de température définie : </p>
+                    <p>XX°C - XX°C</p>
+                </div>
+                <div class="singleInfo">
+                    <p>Suivi du température : </p> 
+                    <!---- Graphiques à intégrer ---->
+                </div>
+            </div>
+            <div>
+                <p>Position géographique : </p>
+                <div>
+                    <!----- Carte Google Maps à intégrer ---->
+                    <div id="map">
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<!--Footer à inclure -->
+
+<script>
+    console.log('halloha');
+
+    // condition à ajouter pour l'affichage de la carte 
+    let map;
+
+    function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: -34.397, lng: 150.644 },
+        zoom: 8,
+    });
+    }
+
+    window.initMap = initMap;
+</script>
+
+
+  <!---- API Key to determine ---->
+  <!--<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer>
+  </script>-->
+
+</html>
