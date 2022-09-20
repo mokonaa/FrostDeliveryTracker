@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600&display=swap");
+:root {
+  --color-white: #ffffff;
+  --color-black: #18181C;
+  --color-grey: #c2c4cc;
+  --color-blue: hsl(213, 63%, 49%);
+  --color-green: #51B37F;
+  --color-red: #c64022;
+  --color-orange: #df9431;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 600;
+  --fs-title: 40px;
+  --fs-subtitle: 30px;
+  --fs-text: 20px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font: inherit;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+span {
+  display: inline-block;
+}
+
+body {
+  background: var(--color-white);
+  text-rendering: optimizeSpeed;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: var(--color-black);
+}
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-blue);
+  border-radius: 100vh;
+}
+
+*::-moz-selection {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+*::selection {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: var(--color-grey);
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 30px;
+}
+
+header .logo {
+  width: 100px;
+}
+
+header nav a {
+  margin: 0 50px 0 0;
+  font-size: calc(var(--fs-text) + 5px);
+}
+
+header nav a:hover {
+  border-bottom: 1px solid var(--color-blue);
+}
+
+.page-active {
+  color: var(--color-blue);
+}
+
+.qui-nous-sommes {
+  padding: 50px 100px 100px 100px;
+}
+
+.qui-nous-sommes h2 {
+  font-size: var(--fs-title);
+}
+
+.qui-nous-sommes-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.qui-nous-sommes-content p {
+  width: 60%;
+  font-size: var(--fs-text);
+  margin: 50px 50px 0 0;
+}
+
+.qui-nous-sommes-content img {
+  width: 40%;
+}
+
+.proposition {
+  padding: 50px 100px 100px 100px;
+}
+
+.proposition h2 {
+  font-size: var(--fs-title);
+}
+
+#detailsColis {
+  padding: 50px 100px 100px 100px;
+}
+
+#detailsColis #title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#detailsColis #title_pic {
+  width: 48px;
+  margin-right: 12px;
+}
+
+#detailsColis .singleInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px 0;
+}
+
+#detailsColis .singleInfo p {
+  margin: 0;
+}
+
+footer {
+  background: var(--color-grey);
+  padding: 50px 100px;
+}
+
+footer .footer-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer-top-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 80px;
+}
+
+footer .footer-top-card-title {
+  margin-bottom: 30px;
+  font-size: var(--fs-text);
+  color: var(--color-blue);
+}
+
+footer .footer-top-card-content {
+  font-size: calc(var(--fs-text) - 5px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 30px;
+}
+
+footer .footer-top-card-content a:hover {
+  border-bottom: 1px solid var(--color-blue);
+}
+
+footer .footer-top-card .logo {
+  width: 100px;
+}
+
+footer .footer-bottom {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+/*# sourceMappingURL=style.css.map */

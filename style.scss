@@ -136,6 +136,30 @@ header {
     }
 }
 
+#detailsColis {
+    padding: 50px 100px 100px 100px;
+
+    #title {
+        display: flex;
+        align-items: center;
+    }
+    
+    #title_pic{
+        width: 48px;
+        margin-right: 12px;
+    }
+    
+    .singleInfo {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+    }
+    
+    .singleInfo p {
+        margin: 0;
+    }
+}
+
 
 footer {
     background: var(--color-grey);
