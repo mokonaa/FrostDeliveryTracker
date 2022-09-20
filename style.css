@@ -132,11 +132,11 @@ header nav a:hover {
   font-size: var(--fs-title);
 }
 
-#detailsColis {
-  padding: 50px 100px 100px 100px;
+.detailsColis {
+  padding: 50px;
 }
 
-#detailsColis #title {
+.detailsColis #title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,12 +145,12 @@ header nav a:hover {
           align-items: center;
 }
 
-#detailsColis #title_pic {
+.detailsColis #title_pic {
   width: 48px;
   margin-right: 12px;
 }
 
-#detailsColis .singleInfo {
+.detailsColis .singleInfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -161,8 +161,14 @@ header nav a:hover {
   margin: 10px 0;
 }
 
-#detailsColis .singleInfo p {
+.detailsColis .singleInfo p {
   margin: 0;
+}
+
+.detailsColis #map {
+  position: absolute !important;
+  height: 100% !important;
+  width: 100% !important;
 }
 
 footer {

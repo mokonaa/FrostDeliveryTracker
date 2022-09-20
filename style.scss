@@ -136,8 +136,9 @@ header {
     }
 }
 
-#detailsColis {
-    padding: 50px 100px 100px 100px;
+.detailsColis {
+    padding: 50px;
+    // background-color: red;
 
     #title {
         display: flex;
@@ -157,6 +158,12 @@ header {
     
     .singleInfo p {
         margin: 0;
+    }
+
+    #map {
+        position: absolute !important; 
+        height: 100% !important;
+         width: 100% !important;
     }
 }
 
