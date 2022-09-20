@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600&display=swap");
+:root {
+  --color-white: #ffffff;
+  --color-black: #18181C;
+  --color-grey: #c2c4cc;
+  --color-blue: hsl(213, 63%, 49%);
+  --color-green: #51B37F;
+  --color-red: #c64022;
+  --color-orange: #df9431;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 600;
+  --fs-title: 40px;
+  --fs-subtitle: 30px;
+  --fs-text: 20px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+span {
+  display: inline-block;
+}
+
+body {
+  background: var(--color-white);
+  text-rendering: optimizeSpeed;
+  font-family: "Be Vietnam Pro", sans-serif;
+  color: var(--color-black);
+}
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-blue);
+  border-radius: 100vh;
+}
+
+*::selection {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+header {
+  display: flex;
+  background: var(--color-grey);
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+header .logo {
+  width: 100px;
+}
+header nav a {
+  padding: 0 50px 0 0;
+  font-size: calc(var(--fs-text) + 5px);
+}
+header nav a:hover {
+  color: var(--color-blue);
+}
+
+.page-active {
+  color: var(--color-blue);
+}
+
+.qui-nous-sommes {
+  padding: 50px 100px 100px 100px;
+}
+.qui-nous-sommes h2 {
+  font-size: var(--fs-title);
+}
+.qui-nous-sommes-content {
+  display: flex;
+}
+.qui-nous-sommes-content p {
+  width: 60%;
+  font-size: var(--fs-text);
+  margin: 50px 50px 0 0;
+}
+.qui-nous-sommes-content img {
+  width: 40%;
+}
+
+.proposition {
+  padding: 50px 100px 100px 100px;
+}
+.proposition h2 {
+  font-size: var(--fs-title);
+}
+
+footer {
+  background: var(--color-grey);
+  padding: 50px 100px;
+}
+footer .footer-top {
+  display: flex;
+}
+footer .footer-top-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 0 80px;
+}
+footer .footer-top-card-title {
+  margin-bottom: 30px;
+  font-size: var(--fs-text);
+  color: var(--color-blue);
+}
+footer .footer-top-card-content {
+  font-size: calc(var(--fs-text) - 5px);
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-top-card .logo {
+  width: 100px;
+}
+footer .footer-bottom {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+/*# sourceMappingURL=/style.d310c905.css.map */

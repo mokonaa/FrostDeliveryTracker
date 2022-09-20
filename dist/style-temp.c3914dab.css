@@ -1,0 +1,16 @@
+.wrapper-temp {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper-temp h3 {
+  text-align: center;
+}
+.wrapper-temp .temp-container {
+  width: 80%;
+}
+
+/*# sourceMappingURL=/style-temp.c3914dab.css.map */
