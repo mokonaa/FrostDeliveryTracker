@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>EDT - Détails du colis</title>
+  <link rel="stylesheet" href="DetailsColis_style.css">
+</head>
+<body>
+    <!---- Header à inclure ---->
+    <div>
+        <h1>Détails du colis</h1>
+    </div>
+    <div>Vous retrouverez sur cette page toutes les informations concernant votre colis.</div>
+
+    <!--- Détails--->
+    <div id='container'>
+        <p>ID : </p>
+        <p>Statut du colis : </p>
+        <p>Fournisseur : </p>
+        <p>Destinataire : </p>
+        <p>Heure de départ : </p>
+
+        <div>
+            <p>Plage de température définie : </p>
+            <p>Suivi du température : </p> 
+            <div>
+                <!---- Graphiques à intégrer ---->
+            </div>
+        </div>
+        <div>
+            <p>Position géographique : </p>
+            <div>
+                <!----- Carte Google Maps à intégrer ---->
+                <div id="map">
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!--Footer à inclure -->
+
+<script>
+    console.log('halloha');
+    let map;
+
+    function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: -34.397, lng: 150.644 },
+        zoom: 8,
+    });
+    }
+
+    window.initMap = initMap;
+</script>
+
+
+  <!---- API Key to determine ---->
+  <!--<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer>
+  </script>-->
+
+</html>
