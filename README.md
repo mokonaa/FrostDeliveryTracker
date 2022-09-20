@@ -1,2 +1,0 @@
-# FrostDeliveryTracker
-One week project
