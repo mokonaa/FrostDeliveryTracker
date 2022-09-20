@@ -8,29 +8,29 @@
             <div class="footer-top-card">
                 <h4 class="footer-top-card-title">Frost Delivery Tracker</h4>
                 <div class="footer-top-card-content">
-                    <a href="engagements.html">Nos engagements</a>
-                    <a href="partenaires.html">Nos partenaires</a>
-                    <a href="apropos.html">À propos de nous</a>
-                    <a href="conditions.html">Conditions générales</a>
-                    <a href="faq.html">FAQ / Aide</a>
+                    <a href="engagements.php">Nos engagements</a>
+                    <a href="partenaires.php">Nos partenaires</a>
+                    <a href="apropos.php">À propos de nous</a>
+                    <a href="conditions.php">Conditions générales</a>
+                    <a href="faq.php">FAQ / Aide</a>
                 </div>
             </div>
             <div class="footer-top-card">
                 <h4 class="footer-top-card-title">Adhérer à notre produit</h4>
                 <div class="footer-top-card-content">
-                    <a href="engagements.html">Nos engagements</a>
-                    <a href="adherer.html">Adhérer</a>
-                    <a href="faq.html">FAQ</a>
+                    <a href="engagements.php">Nos engagements</a>
+                    <a href="adherer.php">Adhérer</a>
+                    <a href="faq.php">FAQ</a>
                 </div>
             </div>
             <div class="footer-top-card">
                 <h4 class="footer-top-card-title">Menu</h4>
                 <div class="footer-top-card-content">
-                    <a href="index.html">Accueil</a>
-                    <a href="apropos.html">À propos</a>
-                    <a href="partenaires.html">Partenaires</a>
-                    <a href="adherer.html">Adhérer</a>
-                    <a href="faq.html">FAQ</a>
+                    <a href="index.php">Accueil</a>
+                    <a href="apropos.php">À propos</a>
+                    <a href="partenaires.php">Partenaires</a>
+                    <a href="adherer.php">Adhérer</a>
+                    <a href="faq.php">FAQ</a>
                 </div>
             </div>
         </div>

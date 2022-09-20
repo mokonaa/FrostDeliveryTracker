@@ -91,10 +91,6 @@ header .user-login {
   width: 40px;
 }
 
-.page-active {
-  color: var(--color-blue);
-}
-
 .qui-nous-sommes {
   padding: 50px 100px 100px 100px;
 }
