@@ -8,5 +8,5 @@
                 du site marchant de pair avec les données des composants et un travaillant sur le bon fonctionnement de
                 notre appareil.
             </p>
-            <img src="img/team.jpg" alt="our team" draggable="false">
+            <img src="../img/team.jpg" alt="our team" draggable="false">
         </div>

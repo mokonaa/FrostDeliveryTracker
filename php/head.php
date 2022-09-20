@@ -7,4 +7,4 @@
 
     <link rel="stylesheet" href="../css/style.css">
 
-    <script src="main.js"></script>
+    <script src="../main.js"></script>
