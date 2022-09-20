@@ -4,7 +4,7 @@
                     <h4 class="footer-top-card-title">Nous Contacter</h4>
                     <p class="footer-top-card-content">1 Rue du Dahomey<br>75011 Paris<br>xxxxxx.xxxxxx@ecv.fr<br>01 85 08
                         26 86</p>
-                    <img src="../img/logo.png" alt="Frost Delivery Tracker Logo" class="logo" draggable="false">
+                    <img src="./img/logo.png" alt="Frost Delivery Tracker Logo" class="logo" draggable="false">
                 </div>
                 <div class="footer-top-card">
                     <h4 class="footer-top-card-title">Frost Delivery Tracker</h4>
