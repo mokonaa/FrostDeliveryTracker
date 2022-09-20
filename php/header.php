@@ -1,6 +1,6 @@
 <header>
         <div class="header">
-                <a href="../pageIndex/index.php"><img src="../img/logo.png" alt="Frost Delivery Tracker Logo" class="logo"
+                <a href="index.php"><img src="../img/logo.png" alt="Frost Delivery Tracker Logo" class="logo"
                         draggable="false"></a>
 
                 <nav>
