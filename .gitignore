@@ -1,8 +1,3 @@
-<<<<<<< HEAD
 *.md
 .gitignore
 tmp.html
-=======
-README.md
-.gitignore
->>>>>>> 2880437ac6fa1e57d0373c30bd91d5edfdfe13ca

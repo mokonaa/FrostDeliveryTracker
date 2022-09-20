@@ -76,7 +76,7 @@ body {
 }
 
 
-header {
+.header {
     display: flex;
     background: var(--color-grey);
     width: 100%;
@@ -140,7 +140,7 @@ header {
 }
 
 
-footer {
+.footer {
     background: var(--color-grey);
     padding: 50px 100px;
 
