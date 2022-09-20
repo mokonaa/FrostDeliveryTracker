@@ -3,6 +3,7 @@
 
 <head>
     <?php include("php/head.php")?>
+    <title>À propos de Frost Delivery Tracker</title>
 </head>
 
 <body>
