@@ -76,11 +76,11 @@ header .logo {
   width: 100px;
 }
 header nav a {
-  padding: 0 50px 0 0;
+  margin: 0 50px 0 0;
   font-size: calc(var(--fs-text) + 5px);
 }
 header nav a:hover {
-  color: var(--color-blue);
+  border-bottom: 1px solid var(--color-blue);
 }
 
 .page-active {
@@ -135,6 +135,11 @@ footer .footer-top-card-content {
   font-size: calc(var(--fs-text) - 5px);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  line-height: 30px;
+}
+footer .footer-top-card-content a:hover {
+  border-bottom: 1px solid var(--color-blue);
 }
 footer .footer-top-card .logo {
   width: 100px;
