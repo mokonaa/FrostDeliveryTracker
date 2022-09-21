@@ -96,23 +96,24 @@
 
 
 <script>
-    console.log('halloha');
-    var map = L.map('map').setView([39.74739, -105], 13);
+    //  var map = L.map('map').setView([39.74739, -105], 13);
+    // 48.86004350462898, 2.2978489601227094
+    var map = L.map('map').setView([48.86004350462898, 2.2978489601227094], 15);
+
     var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '© OpenStreetMap'
     }).addTo(map);
-    console.log("finished conversion json geojson");
 
 
-    /*var jsonStructure = {
+    var jsonStructure = {
         "executionTime": "2016-08-30 12:27:40 PM",
         "colis": [{
             "id": 72,
-            "positionColisAltitude" : "XXXXXXXX",
-            "positionColisLongitude" : "XXXXXXXX",  
+            "positionColisLongitude" : 48.86004350462898, 
+            "positionColisAltitude" : 2.2978489601227094
         }]
-    };*/
+    };
 
 var json = {
   "executionTime": "2016-08-30 12:27:40 PM",
@@ -161,8 +162,21 @@ var geojson = {
   features: [],
 };
 
-for (i = 0; i < json.stationBeanList.length; i++) {
+for (i = 0; i < jsonStructure.colis.length; i++) {
+ 
+  geojson.features.push({
+    
+            "geometry": {
+                "type": "Point",
+                "coordinates": [jsonStructure.colis[i].positionColisAltitude, jsonStructure.colis[i].positionColisLongitude]
+            },
+            "type": "Feature",
+            "id": jsonStructure.colis[i].id,
+        
+  });
 
+
+  /*
   geojson.features.push({
     "type": "Feature",
     "geometry": {
@@ -182,6 +196,7 @@ for (i = 0; i < json.stationBeanList.length; i++) {
       //"positionColis" : json.stationBeanList[i].positionColis
     }
   });
+  */
 }
 
 // window.CP.exitedLoop(1);
@@ -280,8 +295,8 @@ var bicycleRental = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -104.9788452,
-                    39.6933755
+                    2.3427223827838906,
+                    48.86714336001177
                 ]
             },
             "type": "Feature",
@@ -293,15 +308,13 @@ var bicycleRental = {
     ]
 };
 
-console.log("cc");
-
-
-var bicycleRentalLayer = L.geoJSON(bicycleRental, {
+var bicycleRentalLayer = L.geoJSON(geojson, {
     style:function(feature){
         return feature.properties && feature.properties.style;
     },
 
     pointToLayer: function (feature, latlng) {
+        console.log(latlng)
         return L.circleMarker(latlng, {
             radius: 8,
         fillColor: "#ff7800",
