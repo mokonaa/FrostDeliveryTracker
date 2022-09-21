@@ -96,7 +96,7 @@
     </footer>
     
 </body>
-<!--<!--<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7O3kpyDj3zfPxjrTu0CWtexfnmpkrFlA&callback=initMap"></script>-->-->
+<!--<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7O3kpyDj3zfPxjrTu0CWtexfnmpkrFlA&callback=initMap"></script>-->-->
 
 
 <script>
@@ -113,10 +113,7 @@
     var jsonStructure = {
         "executionTime": "2016-08-30 12:27:40 PM",
         "colis": [{
-<<<<<<< HEAD
-=======
             "id": 72,
->>>>>>> structure json crée et conversion fonctionnelle pour afficher les points
             "positionColisLongitude" : 48.86004350462898, 
             "positionColisAltitude" : 2.2978489601227094
         }]
