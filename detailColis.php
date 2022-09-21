@@ -10,14 +10,18 @@
             content="Frost Delivery Tracker, une solution simple pour que vos livraisons arrivent sans aucun problème.">
     
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
     </head>
     
 <body>
    <!--<header>
-
         <a href="index.html"><img src="img/logo.png" alt="Frost Delivery Tracker Logo" class="logo"
                 draggable="false"></a>
-
         <nav>
             <a href="index.html">Accueil</a>
             <a href="apropos.html" class="page-active">À propos</a>
@@ -25,7 +29,6 @@
             <a href="adherer.html">Adhérer</a>
             <a href="faq.html">FAQ</a>
         </nav>
-
     </header>-->
 
     <section class="detailsColis">
@@ -73,7 +76,7 @@
                 <p>Position géographique : </p>
                 <div>
                     <!----- Carte Google Maps à intégrer ---->
-                    <div id="map">
+                    <div id="map" style="height:180px;">
                                     
                     </div>
                 </div>
@@ -122,11 +125,12 @@
     </footer>-->
     
 </body>
-<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7O3kpyDj3zfPxjrTu0CWtexfnmpkrFlA&callback=initMap"></script>
+<!--<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7O3kpyDj3zfPxjrTu0CWtexfnmpkrFlA&callback=initMap"></script>-->
 
 
 <script>
     console.log('halloha');
+    console.log('hellloooooo');
 
     // condition à ajouter pour l'affichage de la carte 
     /*let map;
@@ -144,6 +148,7 @@
 		initMap(); 
 	};*/
 
+    /*
     document.getElementById("map").removeAttribute("style");
 
     function initMap() {
@@ -162,6 +167,16 @@
 
     window.initMap = initMap;
     document.getElementById("map").removeAttribute("style");
-    console.log("removed it ? ");
+    console.log("removed it ? ");*/
+
+
+    var map = L.map('map').setView([51.505, -0.09], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    console.log("finished, does it show up ?");
+
 </script>
 </html>
