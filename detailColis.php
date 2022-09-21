@@ -113,6 +113,10 @@
     var jsonStructure = {
         "executionTime": "2016-08-30 12:27:40 PM",
         "colis": [{
+<<<<<<< HEAD
+=======
+            "id": 72,
+>>>>>>> structure json crée et conversion fonctionnelle pour afficher les points
             "positionColisLongitude" : 48.86004350462898, 
             "positionColisAltitude" : 2.2978489601227094
         }]
