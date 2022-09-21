@@ -1,8 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+    <?php include("../php/head.php")?>
+    <title>Connectez-vous</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+
+<body>
+
+
+    <section>
         <div class="form-container">
-            <img class="connexion-logo" src="./img/logo.png" alt="logo">
+            <img class="connexion-logo" src="../img/logo.png" alt="logo">
             <form action="" id="connexion-form">
-            <img src="./img/arrow-left-short.svg" width="32" alt="retour en arrière" id="login-button-return" onclick="window.history.go(-1); return false;">
+            <img src="../img/arrow-left-short.svg" width="32" alt="retour en arrière" id="login-button-return" onclick="window.history.go(-1); return false;">
                     
                 <div class="form-title">Connexion</div>
                 <div class="connexion-container">
@@ -21,3 +33,8 @@
                 </div>
             </form>
         </div>
+    </section>
+
+</body>
+
+</html>

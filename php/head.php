@@ -5,6 +5,4 @@
     <meta name="description"
         content="Frost Delivery Tracker, une solution simple pour que vos livraisons arrivent sans aucun problème.">
 
-    <link rel="stylesheet" href="./css/style.css">
-
-    <script src="./main.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
