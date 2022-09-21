@@ -95,7 +95,7 @@ body {
 
         a {
             margin: 0 50px 0 0;
-            font-size: calc(var(--fs-text) + 5px);
+            font-size: var(--fs-text);
         }
 
         a:hover {
@@ -258,6 +258,10 @@ body {
             box-shadow: 0px 0px 1px rgb(0, 0, 0);
         }
 
+        #login-button-return {
+            cursor: pointer;
+        }
+
         .connexion-container {
             margin-bottom: 30px;
         }
@@ -271,6 +275,25 @@ body {
         .connexion-logo {
             width: 150px;
             margin-bottom: 40px;
+        }
+    }
+}
+
+.nos-engagements {
+    padding: 50px 100px 100px 100px;
+
+    &-globaux {}
+
+    &-card {
+        margin-bottom: 75px;
+
+        h3 {
+            font-size: var(--fs-subtitle);
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: var(--fs-text);
         }
     }
 }

@@ -83,7 +83,7 @@ body::-webkit-scrollbar-thumb {
 }
 .header nav a {
   margin: 0 50px 0 0;
-  font-size: calc(var(--fs-text) + 5px);
+  font-size: var(--fs-text);
 }
 .header nav a:hover {
   border-bottom: 1px solid var(--color-blue);
@@ -214,6 +214,9 @@ body::-webkit-scrollbar-thumb {
   padding: 30px;
   box-shadow: 0px 0px 1px rgb(0, 0, 0);
 }
+.form-container #login-button-return {
+  cursor: pointer;
+}
 .form-container .connexion-container {
   margin-bottom: 30px;
 }
@@ -225,4 +228,18 @@ body::-webkit-scrollbar-thumb {
 .form-container .connexion-logo {
   width: 150px;
   margin-bottom: 40px;
+}
+
+.nos-engagements {
+  padding: 50px 100px 100px 100px;
+}
+.nos-engagements-card {
+  margin-bottom: 75px;
+}
+.nos-engagements-card h3 {
+  font-size: var(--fs-subtitle);
+  margin-bottom: 20px;
+}
+.nos-engagements-card p {
+  font-size: var(--fs-text);
 }/*# sourceMappingURL=style.css.map */

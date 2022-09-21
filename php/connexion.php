@@ -2,7 +2,7 @@
         <div class="form-container">
             <img class="connexion-logo" src="./img/logo.png" alt="logo">
             <form action="" id="connexion-form">
-                <a class="btn-retour" href=""><img src="./img/arrow-left-short.svg" width="32" alt="retour en arrière"></a>
+            <img src="./img/arrow-left-short.svg" width="32" alt="retour en arrière" id="login-button-return" onclick="window.history.go(-1); return false;">
                     
                 <div class="form-title">Connexion</div>
                 <div class="connexion-container">
