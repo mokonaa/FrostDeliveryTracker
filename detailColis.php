@@ -9,7 +9,7 @@
         <meta name="description"
             content="Frost Delivery Tracker, une solution simple pour que vos livraisons arrivent sans aucun problème.">
     
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/css/style.css">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
         integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
         crossorigin=""/>
@@ -78,6 +78,10 @@
                     <div id="map" style="height:40vh;">
                                     
                     </div>
+                </div>
+                <div style="display:flex;">
+                    <div style="margin:5px;" id="json"></div>
+                    <div style="margin:5px;"  id="geoJson"></div>
                 </div>
                 <div style="display:flex;">
                     <div style="margin:5px;" id="json"></div>
@@ -378,6 +382,10 @@ var equipements_lyr = L.geoJSON(equipements, {
 
 </script>
 </html>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="main.js"></script>
+<!--<script src="conversionjson.js"></script>-->
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="main.js"></script>

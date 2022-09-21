@@ -13,7 +13,8 @@ const temps = [
 ];
 
 // recup donnes températures depuis le json + requete
-
+let json = require('/test.json');
+console.log(json, 'the json obj');
 
 var celsius = [0, 10, 5, 2, 20, 30, 45]; // température fixe}]
 var fahrenheit = [0, 10, 5, 2, 20, 30, 45]; // température fixe}]
