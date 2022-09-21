@@ -1,0 +1,26 @@
+.conditions-generales {
+  padding: 50px 100px 100px 100px;
+}
+
+.conditions-generales h1 {
+  font-size: var(--fs-title);
+  margin-bottom: 80px;
+}
+
+.conditions-generales-card h2 {
+  font-size: var(--fs-subtitle);
+  margin-bottom: 50px;
+}
+
+.conditions-generales-card h3,
+.conditions-generales-card h4 {
+  font-size: var(--fs-subtitle);
+  margin-bottom: 30px;
+}
+
+.conditions-generales-card p {
+  font-size: var(--fs-text);
+  margin-bottom: 85px;
+}
+
+/*# sourceMappingURL=conditions.css.map */
