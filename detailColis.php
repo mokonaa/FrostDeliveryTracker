@@ -109,7 +109,6 @@
     var jsonStructure = {
         "executionTime": "2016-08-30 12:27:40 PM",
         "colis": [{
-            "id": 72,
             "positionColisLongitude" : 48.86004350462898, 
             "positionColisAltitude" : 2.2978489601227094
         }]
@@ -171,7 +170,7 @@ for (i = 0; i < jsonStructure.colis.length; i++) {
                 "coordinates": [jsonStructure.colis[i].positionColisAltitude, jsonStructure.colis[i].positionColisLongitude]
             },
             "type": "Feature",
-            "id": jsonStructure.colis[i].id,
+            "id": i,
         
   });
 
