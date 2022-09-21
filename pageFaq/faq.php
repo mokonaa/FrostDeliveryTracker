@@ -14,6 +14,7 @@
 
 
    <article>
+    <h1>FAQ</h1>
         <details close>
             <summary>
                 <h2>Comment commander le boîtier ?</h2>

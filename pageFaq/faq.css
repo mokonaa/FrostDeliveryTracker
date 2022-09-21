@@ -1,9 +1,15 @@
 article{
-    padding: 80px 100px 80px 100px;
+    padding: 50px 100px 80px 100px;
     display: flex;
     flex-direction: column;
     /* justify-content: center;
     align-items: center; */
+}
+
+article > h1{
+    font-size: var(--fs-title);
+    margin-bottom: 35px;
+    text-align: center;
 }
 
 details{
@@ -34,3 +40,4 @@ details > p{
     padding: 25px 10px;
     font-size: 14px;
 }
+
