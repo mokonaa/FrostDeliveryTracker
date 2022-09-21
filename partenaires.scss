@@ -1,0 +1,23 @@
+.nos-partenaires {
+    padding: 50px 100px 100px 100px;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        font-size: var(--fs-title);
+        margin-bottom: 80px;
+    }
+
+    &-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        line-height: 80px;
+
+        img {
+            height: 100px;
+            margin: 0 50px;
+        }
+    }
+
+}
