@@ -1,0 +1,36 @@
+article{
+    padding: 80px 100px 80px 100px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+details{
+    margin-bottom: 20px;
+}
+
+summary{
+    padding: 10px;
+    border-bottom:2px solid var(--color-blue);
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+}
+
+summary > span{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: var(--fs-title);
+}
+
+summary > h2{
+    font-size: var(--fs-text);
+}
+
+details > p{
+    background-color: #F2F2F2;
+    padding: 25px 10px;
+    font-size: 14px;
+}
