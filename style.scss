@@ -139,6 +139,18 @@ body {
     }
 }
 
+.wrapper-temp {
+    h3 {
+        text-align: center;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+
+}
+
 
 .footer {
     background: var(--color-grey);
@@ -273,4 +285,11 @@ body {
             margin-bottom: 40px;
         }
     }
+}
+
+.leaflet-container {
+    height: 400px;
+    width: 600px;
+    max-width: 100%;
+    max-height: 100%;
 }
