@@ -8,7 +8,7 @@
     //S'il n'y pas de SESSION ID, on retourne vers la page de connexion, cela veut dire que personne ne s'est connecté
     if(!isset($_SESSION['ID']))
     {
-        header('location: ../pageConnexion/connexion.php');
+        header('location: ../pageLogin/login.php');
     }
 
 ?>

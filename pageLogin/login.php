@@ -1,3 +1,10 @@
+<?php
+
+    // Connexion de la BDD
+    require("../php/connect.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -12,28 +19,62 @@
 
     <section>
         <div class="form-container">
+
             <img class="connexion-logo" src="../img/logo.png" alt="logo">
-            <form action="" id="connexion-form">
-            <img src="../img/arrow-left-short.svg" width="32" alt="retour en arrière" id="login-button-return" onclick="window.history.go(-1); return false;">
+            <form id="connexion-form" method="POST">
+
+                <a class="btn-retour" href="javascript: window.history.go(-1)"><img src="../img/arrow-left-short.svg" width="32" alt="flèche retour"></a>
                     
                 <div class="form-title">Connexion</div>
                 <div class="connexion-container">
                     <label for="identifiant">Identifiant</label>
-                    <input type="text" id="identifiant" autocomplete="off" required>
+                    <input type="text" id="identifiant" autocomplete="off" name="identifiant">
                 </div> 
                 <div class="connexion-container">
-                    <label for="mdp">Mot de passe</label>
-                    <input type="password" id="mdp" autocomplete="off" required>
+                    <label for="motdepasse">Mot de passe</label>
+                    <input type="password" id="mdp" autocomplete="off" name="motdepasse">
                 </div>
-                <button type="submit">Se connecter</button>
+                <button type="submit" name="btnConnexion">Se connecter</button>
                 <div class="information">
                     <p>Vous n'êtes pas client ?</p>
                     <a href="#">Accéder à nos offres</a>
                 </div>
-                </div>
-            </form>
+            </div>
+        </form>
+
         </div>
     </section>
+
+    <?php
+
+    // Bouton connexion pressé
+    if(isset($_POST['btnConnexion']))
+    {
+
+        if(ctype_alnum($_POST['identifiant']))
+        {
+            // on enregistre la requete qui cherche un compte existant dans la bdd puis l'execute
+            $query = "SELECT * FROM `compte_fdt` WHERE `identifiant`='$_POST[identifiant]' AND `mdp`='$_POST[motdepasse]'";
+            $result = mysqli_query($conn, $query);
+            //si on trouve une ligne qui correspond, on démarre une session et "crée" un ID puis redirection
+            if(mysqli_num_rows($result)==1)
+            {
+                session_start();
+                $_SESSION['ID']=$_POST['identifiant'];
+                header("location: ../pageIndex/index.php");
+            }
+            //sinon on signale que le mdp n'est pas bon
+            else
+            {
+                echo "<script>alert('Mot de passe incorrect.');</script>";
+            }
+        }
+        else
+        {
+            echo "<script>alert('Merci d'entrer un identifiant composé de lettres et/ou chiffres uniquement.');</script>";
+        }
+    }
+    ?>
 
 </body>
 
