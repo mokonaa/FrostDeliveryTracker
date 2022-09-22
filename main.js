@@ -1,6 +1,4 @@
-console.log('help')
-
-// heure ( --> voir le temps comment c'est géré - fluide)
+console.log("coucoucocuo");
 const temps = [
     '20',
     '-15',
@@ -14,6 +12,8 @@ const temps = [
     
 ];
 
+// recup donnes températures depuis le json + requete
+console.log(json, 'the json obj');
 
 var celsius = [0, 10, 5, 2, 20, 30, 45]; // température fixe}]
 var fahrenheit = [0, 10, 5, 2, 20, 30, 45]; // température fixe}]
@@ -40,3 +40,5 @@ const myChart = new Chart(
     document.getElementById('myChart'),
     config
 );
+
+
