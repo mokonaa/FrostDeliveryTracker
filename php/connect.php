@@ -10,10 +10,10 @@
     // Détection d'erreur bdd
     if(mysqli_connect_error())
     {
-        echo "Non connecté à la BDD.";
+        echo "<script>alert('Non connecté à la BDD.');</script>";
     }
-    else
-    {
-        echo "Connecté à la BDD";
-    }
+    // else
+    // {
+    //     echo "Connecté à la BDD";
+    // }
 ?>

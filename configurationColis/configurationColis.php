@@ -8,7 +8,7 @@
     //S'il n'y pas de SESSION ID, on retourne vers la page de connexion, cela veut dire que personne ne s'est connecté
     if(!isset($_SESSION['ID']))
     {
-        header('location: ../pageConnexion/connexion.php');
+        header('location: ../pageLogin/login.php');
     }
 
 ?>
@@ -48,14 +48,6 @@
                         <input name="max-temp" type="text" id="max-temp" placeholder="Max." autocomplete=off required>
                     </div>
                 </div>
-            </div>
-            <div class="configuration-container">
-                <label for="depart">Point de départ</label>
-                <input name="depart" type="text" id="depart" autocomplete=off required>
-            </div>
-            <div class="configuration-container">
-                <label for="expediteur">Expédiiteur</label>
-                <input name="expediteur" type="text" id="expediteur" autocomplete=off required>
             </div>
             <button type="submit" name="btnConfiguration">Confirmer</button>
         </form>
