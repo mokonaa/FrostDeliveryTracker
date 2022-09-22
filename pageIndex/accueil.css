@@ -1,0 +1,130 @@
+.accueil{
+    padding: 50px 100px 100px 100px;
+    display: flex;
+    flex-direction: column;
+}
+.accueil-title {
+    margin-bottom: 75px;
+}
+
+.accueil-title h1 {
+    font-size: var(--fs-subtitle);
+    margin-bottom: 35px;
+}
+
+.accueil-title p {
+    font-size: var(--fs-text);
+    margin-bottom: 10px;
+}
+
+.accueil-button {
+    display: flex;
+}
+
+.accueil-button input {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-right: none;
+    padding: 0.5em 1em;
+}
+.accueil-button button {
+    border: 2px solid var(--color-black);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 0.5em 1em;
+    background-color: var(--color-blue);
+    cursor: pointer;
+}
+
+.accueil-avantage-globaux {
+    background: var(--color-grey);
+    padding: 3em 3em;
+    border-radius: 50px;
+    margin-bottom: 75px;
+}
+
+.accueil-avantage-globaux h1 {
+    font-size: var(--fs-subtitle);
+    font-weight: var(--fw-bold);
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .accueil-avantage-globaux-container {
+    display: flex;
+  }
+  
+  .accueil-avantage-globaux-container-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 50px;
+  }
+  
+  .accueil-avantage-globaux-container-card img {
+    width: 200px;
+    margin-bottom: 30px;
+  }
+  
+  .accueil-avantage-globaux-container-card h2 {
+    font-size: var(--fs-text);
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .accueil-avantage-globaux-container-card p {
+    font-size: var(--fs-text);
+    text-align: center;
+  }
+
+
+  .accueil-partenaires {
+    padding: 50px 100px 100px 100px;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-grey);
+    padding: 3em 3em;
+    border-radius: 50px;
+  }
+  
+  .accueil-partenaires h1 {
+    font-size: var(--fs-title);
+    margin-bottom: 80px;
+  }
+  
+  .accueil-partenaires-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 80px;
+  }
+  
+  .accueil-partenaires-content img {
+    height: 100px;
+    margin: 0 50px;
+  }
+
+  .accueil-presentation {
+    margin-bottom: 75px;
+  }
+
+  .accueil-presentation h1 {
+    font-size: var(--fs-subtitle);
+    margin-bottom: 35px;
+  }
+
+  .accueil-presentation p {
+    font-size: var(--fs-text);
+    margin-bottom: 30px;
+  }
+
+  .accueil-presentation a {
+    font-size: var(--fs-text);
+    margin-bottom: 75px;
+    background: var(--color-blue);
+    border-radius: 30px;
+    padding: 0.5em 1em;
+
+  }
+
