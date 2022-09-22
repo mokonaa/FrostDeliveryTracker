@@ -60,7 +60,7 @@
     border: 1px solid var(--color-blue);
 }
 
-.form-container #connexion-form {
+.form-container .coli-perdu-form {
     width: 350px;
     padding: 30px;
     box-shadow: 0px 0px 1px rgb(0, 0, 0);
@@ -70,7 +70,7 @@
     cursor: pointer;
 }
 
-.form-container .connexion-container {
+.form-container .coli-perdu-container {
     margin-bottom: 30px;
 }
 
@@ -80,7 +80,18 @@
     text-align: center;
 }
 
-.form-container .connexion-logo {
-    width: 150px;
-    margin-bottom: 40px;
+textarea {
+    padding: 10px;
+    max-width: 100%;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
 }
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
