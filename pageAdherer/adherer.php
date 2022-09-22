@@ -17,13 +17,13 @@
         <div class="container-offre">
             <div class="txt-offre">
                 <h2>Arduino - TKinter</h2>
-                <p>Gardez un œil sur l’état et la localisation de vos colis.
+                <p>Proposez à vos clients de gardez un œil sur l’état et la localisation de leurs colis.
                 <br> <br>
-                Plus de doute sur le transport de vos produits… Avec notre boîtier Arduino-TKinter vous pourrez vérifier la température ainsi que la localisation de vos produits en temps réel.</p>
+                Plus de doute sur le transport des produits… Avec notre boîtier Arduino-TKinter les utilisateurs pourront vérifier la température ainsi que la localisation des produits en temps réel.</p>
             </div>
 
             <div class="img-offre">
-                <img src="img/boîtier.png" alt="">
+                <img src="img/boitier.png" alt="Notre boîtier Arduino - TKinter">
             </div>
         </div> 
 
