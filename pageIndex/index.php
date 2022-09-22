@@ -1,4 +1,8 @@
-
+<?php
+    require('../php/connect.php');
+    session_start();
+    $numColis;
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -9,15 +13,7 @@
 </head>
 
 <body>
-
-
-
-   
-
     <?php include("../php/header.php")?>
-
-
-
 
     <section class="accueil">
         <div class="accueil-title">
@@ -25,8 +21,10 @@
             <p>Garder un oeil sur l'état et la localisation de votre colis.<br>Vous n'avez qu'à rentrer le numéro
         de votre colis et vous serez redirigés vers la page adaptée.</p>
             <div class="accueil-button">
-                <input type="text" placeholder="n° de colis">
-                <button id="numeroColisButton">Suivre mon colis</button>
+                <form method="POST" onsubmit="return;">
+                    <input type="text" placeholder="n° de colis" name="numeroColisInput" required>
+                    <button name="numeroColisButton">Suivre mon colis</button>
+                </form>
             </div>
         </div>
 
@@ -66,17 +64,34 @@
             <h1>Nos partenaires</h1>
             <div class="accueil-partenaires-content">
                 <img src="./img/auchan.png" alt="auchan" draggable="false">
-                <img src="./img/LOGO_ECV_CSC_Vert_RVB.jpg" alt="ECV" draggable="false">
+                <img src="./img/LOGO_ECV_CSC_Vert_RVB.png" alt="ECV" draggable="false">
                 <img src="./img/carrefour.png" alt="carrefour" draggable="false">
-                <img src="./img/LOGO_ECV_CSC_Vert_RVB.jpg" alt="ECV" draggable="false">
+                <img src="./img/LOGO_ECV_CSC_Vert_RVB.png" alt="ECV" draggable="false">
                 <img src="./img/E.Leclerc logo blog.png" alt="Leclerc" draggable="false">
-                <img src="./img/LOGO_ECV_CSC_Vert_RVB.jpg" alt="ECV" draggable="false">
+                <img src="./img/LOGO_ECV_CSC_Vert_RVB.png" alt="ECV" draggable="false">
             </div>
         </div>
     
     </section>
 
     <?php include("../php/footer.php")?>
+<?php
+    if(isset($_POST['numeroColisButton'])) {
+        $numColis = $_POST['numeroColisInput'];
+        if(!empty($numColis)){
+
+            $result = mysqli_query($conn, "SELECT * FROM packages WHERE tracking_number = '".$numColis."'");
+            if(mysqli_num_rows($result)) {                
+                echo '<script language="JavaScript" type="text/javascript">
+                window.location.href = "../pageSuivi/detailColis.php";
+                </script>';
+
+            } else {
+                echo "<script>alert('Le numéro ne correspond à aucun colis.');</script>";
+            }     
+        } 
+    }
+?>
 </body>
 
 </html>

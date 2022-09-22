@@ -14,12 +14,11 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <title>Configuration d'un colis</title>
     <link rel="stylesheet" href="configurationColis.css">
-    <link rel="stylesheet" href="../style.css">
     <?php require("../php/head.php") ?>
 </head>
 
