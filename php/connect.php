@@ -1,9 +1,9 @@
 <?php   
 
     $host = "localhost";
-    $user = "sql_ecv_aammara";
-    $pass = "WwCpJC9N2Q";
-    $base = "base_ecv_aammara";
+    $user = "root";
+    $pass = "";
+    $base = "testbdd";
 
     $conn = mysqli_connect($host,$user,$pass,$base);
 
