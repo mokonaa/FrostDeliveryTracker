@@ -13,6 +13,8 @@ const temps = [
 ];
 
 // recup donnes températures depuis le json + requete
+
+// recup donnes températures depuis le json + requete
 let json = require('/test.json');
 console.log(json, 'the json obj');
 
