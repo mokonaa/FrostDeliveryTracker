@@ -21,7 +21,7 @@
 <body>
   
     <header>
-        <?php include("php/header.php")?>
+        <?php include("../php/header.php")?>
     </header>
 
     <section class="detailsColis">
@@ -92,7 +92,7 @@
     </section>
 
     <footer>
-        <?php include("php/footer.php")?>
+        <?php include("../php/footer.php")?>
     </footer>
     
 </body>
