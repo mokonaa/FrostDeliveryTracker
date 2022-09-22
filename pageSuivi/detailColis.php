@@ -13,6 +13,67 @@
     </head>
     
 <body>
+
+
+    <?php 
+        $servername = 'localhost';
+        $username = 'root';
+        $password = 'root';
+        $dbname = "frost"; 
+        $userInfos = [];
+        $tempArrayIn = [];
+        $tempArrayOut = [];
+
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        // Check connection
+        if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+        }
+
+        // requête pour aller chercher les données du colis
+        $sql = "SELECT * FROM Packages;"; 
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            //var_dump($row);
+            //echo "id: " . $row["id"]."<br>";
+            array_push($userInfos, $row);
+            array_push($tempArrayIn, $row["temp_in"]);
+            array_push($tempArrayOut, $row["temp_out"]);
+        }
+        } else {
+            echo "0 results";
+        }
+
+        $conn->close();
+
+        //var_dump($userInfos);
+        //echo "<br>";
+        //var_dump($tempArrayIn);
+        //echo "<br>";
+        //var_dump($tempArrayOut);
+
+        /*
+        
+          $host = "localhost";
+        $conn = mysqli_connect($host,$user,$pass,$base);
+
+        // Détection d'erreur bdd
+        if(mysqli_connect_error())
+        {
+            echo "Non connecté à la BDD.";
+        }
+        else
+        {
+            echo "Connecté à la BDD";
+        }
+        */ 
+
+
+    ?>
   
     <header>
         <?php include("../php/header.php")?>
@@ -31,9 +92,9 @@
         <div id='containerInfos'>
             <div class="singleInfo">
                 <p>ID : </p>
-                <p>XXXXXX</p>
+                <p><?php echo $userInfos[0]['id'] ?></p>
             </div>
-            <div class="singleInfo">
+            <!--<div class="singleInfo">
                 <p>Fournisseur : </p>
                 <p>XXXXXX</p>
             </div>
@@ -44,11 +105,11 @@
             <div class="singleInfo">
                 <p>Heure de départ : </p>
                 <p>XX : XX</p>
-            </div>
+            </div>-->
             <div>
                 <div class="singleInfo">
                     <p>Plage de température définie : </p>
-                    <p>XX°C - XX°C</p>
+                    <p><?php echo $userInfos[0]['temp_min'] ?> °C- <?php echo $userInfos[0]['temp_max'] ?> °C</p>
                 </div>
                 <div class="singleInfo">
                     <p>Suivi du température : </p>
@@ -59,9 +120,6 @@
                             </canvas>
                         </div>
                     </div>
-                </div>
-                <div>
-                    Test
                 </div>
             </div>
             <div id='mapwrapper' style="position: relative;
@@ -157,46 +215,16 @@ var geojson = {
 };
 
 for (i = 0; i < jsonStructure.colis.length; i++) {
- 
-  geojson.features.push({
-    
-            "geometry": {
-                "type": "Point",
-                "coordinates": [jsonStructure.colis[i].positionColisAltitude, jsonStructure.colis[i].positionColisLongitude]
-            },
-            "type": "Feature",
-            "id": i,
-        
-  });
-
-
-  /*
-  geojson.features.push({
-    "type": "Feature",
-    "geometry": {
-      "type": "Point",
-      "coordinates": [json.stationBeanList[i].longitude, json.stationBeanList[i].latitude]
-    },
-    "properties": {
-      "id": json.stationBeanList[i].id,
-      "stationName": json.stationBeanList[i].stationName,
-      "totalDocks": json.stationBeanList[i].totalDocks,
-      "station": json.stationBeanList[i].stationName,
-      "stAddress1": json.stationBeanList[i].stAddress1,
-      "stAddress2": json.stationBeanList[i].stAddress2,
-      "city": json.stationBeanList[i].city,
-      "postalCode": json.stationBeanList[i].postalCode,
-      "testStation": json.stationBeanList[i].testStation
-      //"positionColis" : json.stationBeanList[i].positionColis
-    }
-  });
-  */
+    geojson.features.push({
+        "geometry": {
+            "type": "Point",
+            "coordinates": [jsonStructure.colis[i].positionColisAltitude, jsonStructure.colis[i].positionColisLongitude]
+        },
+        "type": "Feature",
+        "id": i,
+            
+    });
 }
-
-// window.CP.exitedLoop(1);
-// document.getElementById('json').innerHTML = JSON.stringify(json, null, 2);
-// document.getElementById('geojson').innerHTML = JSON.stringify(geojson, null, 2);
-// L.geoJSON(geojsonFeature).addTo(map);
 
 var bicycleRental = {
     "type": "FeatureCollection",
@@ -308,7 +336,7 @@ var bicycleRentalLayer = L.geoJSON(geojson, {
     },
 
     pointToLayer: function (feature, latlng) {
-        console.log(latlng)
+        // console.log(latlng)
         return L.circleMarker(latlng, {
             radius: 8,
         fillColor: "#ff7800",
@@ -372,8 +400,117 @@ var equipements_lyr = L.geoJSON(equipements, {
 
 
 </script>
-</html>
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="../main.js"></script>
+<script>
+
+const temps = [
+    '20',
+    '-15',
+    '-10',
+    '-5',
+    '0',
+    '5',
+    '10',
+    '15',
+    '20',
+    
+];
+
+// recup donnes températures depuis le json + requete
+
+
+ // var celsius = [0, 10, 5, 2, 20, 30, 45]; // température fixe}]
+// var fahrenheit = [10, 10, 50, 2, 20, 30, 45]; // température fixe}]
+console.log("eee"); 
+console.log("<?php echo("tototo"); ?>");
+console.log(<?php echo ($tempArrayOut[1]) ;?>);
+console.log(<?php $tempArrayOut ?>);
+console.log(<?php $tempArrayIn ?>);
+
+console.log(<?php  echo json_encode($tempArrayIn); ?>);
+var celsius = <?php  echo json_encode($tempArrayIn); ?>;
+var fahrenheit = <?php  echo json_encode($tempArrayOut); ?>;
+
+const data = {
+    labels: temps,
+    datasets: [{
+      label: 'Température colis en celsius',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: celsius, // température fixe
+    }],
+};
+
+const data2 = {
+    labels: temps,
+    datasets: [
+      {
+        label: 'In',
+        data: celsius,
+        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(255, 99, 132)',
+        yAxisID: 'y',
+      },
+      {
+        label: 'Out',
+        data: fahrenheit,
+        borderColor: 'rgb(005, 99, 132)',
+        backgroundColor: 'rgb(005, 99, 132)',
+        yAxisID: 'y1',
+      }
+    ]
+  };
+
+// prévoir un bouton farenheight ->  celsius
+
+const config = {
+    type: 'line',
+    data: data,
+    options: {}
+};
+
+
+const config2 = {
+    type: 'line',
+    data: data2,
+    options: {
+      responsive: true,
+      interaction: {
+        mode: 'index',
+        intersect: false,
+      },
+      stacked: false,
+      plugins: {
+        title: {
+          display: true,
+          text: 'Suivi température'
+        }
+      },
+      scales: {
+        y: {
+          type: 'linear',
+          display: true,
+          position: 'left',
+        },
+        y1: {
+          type: 'linear',
+          display: true,
+          position: 'right',
+  
+          // grid line settings
+          grid: {
+            drawOnChartArea: false, // only want the grid lines for one axis to show up
+          },
+        },
+      }
+    },
+  };
+
+const myChart = new Chart(
+    document.getElementById('myChart'),
+    config2
+);
+</script>
+</html>
+<!--<script src="../main.js"></script>-->
 <!--<script src="conversionjson.js"></script>-->
