@@ -49,14 +49,6 @@
                     </div>
                 </div>
             </div>
-            <div class="configuration-container">
-                <label for="depart">Point de départ</label>
-                <input name="depart" type="text" id="depart" autocomplete=off required>
-            </div>
-            <div class="configuration-container">
-                <label for="expediteur">Expédiiteur</label>
-                <input name="expediteur" type="text" id="expediteur" autocomplete=off required>
-            </div>
             <button type="submit" name="btnConfiguration">Confirmer</button>
         </form>
     </div>
