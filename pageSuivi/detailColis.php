@@ -1,15 +1,9 @@
 <!doctype html>
 <html lang="fr">
+
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Frost Delivery Tracker - Détails du colis</title>
-        <link rel="icon" type="image/png" sizes="64x64" href="img/favicon.png">
-        <meta name="description"
-            content="Frost Delivery Tracker, une solution simple pour que vos livraisons arrivent sans aucun problème.">
-    
-        <link rel="stylesheet" href="css/style.css">
+         <?php include("../php/head.php")?>
+
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
         integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
         crossorigin=""/>
@@ -92,7 +86,7 @@
     </footer>
     
 </body>
-<!--<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7O3kpyDj3zfPxjrTu0CWtexfnmpkrFlA&callback=initMap"></script>-->-->
+<!--<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7O3kpyDj3zfPxjrTu0CWtexfnmpkrFlA&callback=initMap"></script>-->
 
 
 <script>
@@ -381,5 +375,5 @@ var equipements_lyr = L.geoJSON(equipements, {
 </html>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="main.js"></script>
+<script src="../main.js"></script>
 <!--<script src="conversionjson.js"></script>-->
