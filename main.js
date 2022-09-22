@@ -1,5 +1,3 @@
-console.log('help')
-
 // heure ( --> voir le temps comment c'est géré - fluide)
 const temps = [
     '20',
@@ -13,6 +11,8 @@ const temps = [
     '20',
     
 ];
+
+// recup donnes températures depuis le json + requete
 
 
 var celsius = [0, 10, 5, 2, 20, 30, 45]; // température fixe}]
