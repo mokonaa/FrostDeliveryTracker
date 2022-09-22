@@ -1,86 +1,240 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600&display=swap");
+:root {
+  --color-white: #ffffff;
+  --color-black: #18181C;
+  --color-grey: #c2c4cc;
+  --color-blue: hsl(213, 63%, 49%);
+  --color-green: #51B37F;
+  --color-red: #c64022;
+  --color-orange: #df9431;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 600;
+  --fs-title: 40px;
+  --fs-subtitle: 30px;
+  --fs-text: 20px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+span {
+  display: inline-block;
+}
+
+body {
+  background: var(--color-white);
+  text-rendering: optimizeSpeed;
+  font-family: "Be Vietnam Pro", sans-serif;
+  color: var(--color-black);
+}
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-blue);
+  border-radius: 100vh;
+}
+
+*::-moz-selection {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+*::selection {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+header {
+  display: flex;
+  background: var(--color-grey);
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+header .logo {
+  width: 100px;
+}
+
+header nav a {
+  margin: 0 50px 0 0;
+  font-size: calc(var(--fs-text) + 5px);
+}
+
+header nav a:hover {
+  border-bottom: 1px solid var(--color-blue);
+}
+
+.page-active {
+  color: var(--color-blue);
+}
+
+.qui-nous-sommes {
+  padding: 50px 100px 100px 100px;
+}
+
+.qui-nous-sommes h2 {
+  font-size: var(--fs-title);
+}
+
+.qui-nous-sommes-content {
+  display: flex;
+}
+
+.qui-nous-sommes-content p {
+  width: 60%;
+  font-size: var(--fs-text);
+  margin: 50px 50px 0 0;
+}
+
+.qui-nous-sommes-content img {
+  width: 40%;
+}
+
+.proposition {
+  padding: 50px 100px 100px 100px;
+}
+
+.proposition h2 {
+  font-size: var(--fs-title);
+}
+
+footer {
+  background: var(--color-grey);
+  padding: 50px 100px;
+}
+
+footer .footer-top {
+  display: flex;
+}
+
+footer .footer-top-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 0 80px;
+}
+
+footer .footer-top-card-title {
+  margin-bottom: 30px;
+  font-size: var(--fs-text);
+  color: var(--color-blue);
+}
+
+footer .footer-top-card-content {
+  font-size: calc(var(--fs-text) - 5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 30px;
+}
+
+footer .footer-top-card-content a:hover {
+  border-bottom: 1px solid var(--color-blue);
+}
+
+footer .footer-top-card .logo {
+  width: 100px;
+}
+
+footer .footer-bottom {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+} /*# sourceMappingURL=style.css.map */
 .form-title {
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: var(--fw-bold);
-    font-size: var(--fs-text);
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--color-blue);
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-text);
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color-blue);
 }
-
 .form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    /* ajouté par abdel (pour logo page connexion) */
-    font-weight: var(--fw-light);
-    width: 100vw;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* ajouté par abdel (pour logo page connexion) */
+  font-weight: var(--fw-light);
+  width: 100vw;
+  height: 100vh;
 }
-
 .form-container a {
-    color: var(--color-blue);
-    text-decoration: underline;
+  color: var(--color-blue);
+  text-decoration: underline;
 }
-
 .form-container label {
-    display: block;
-    margin-bottom: 5px;
-    color: var(--color-blue);
+  display: block;
+  margin-bottom: 5px;
+  color: var(--color-blue);
 }
-
 .form-container input {
-    width: 100%;
-    outline: none;
-    border: none;
-    font-size: 14px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid var(--color-grey);
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--color-grey);
 }
-
 .form-container input:focus {
-    border-bottom-color: var(--color-blue);
+  border-bottom-color: var(--color-blue);
 }
-
 .form-container button {
-    display: block;
-    margin: 0 auto;
-    border: none;
-    padding: 0.5em 1em;
-    border: 1px solid transparent;
-    color: var(--color-white);
-    background-color: var(--color-blue);
-    cursor: pointer;
-    transition: all 0.2s;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  padding: 0.5em 1em;
+  border: 1px solid transparent;
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  cursor: pointer;
+  transition: all 0.2s;
 }
-
 .form-container button:hover {
-    color: var(--color-blue);
-    background-color: transparent;
-    border: 1px solid var(--color-blue);
+  color: var(--color-blue);
+  background-color: transparent;
+  border: 1px solid var(--color-blue);
 }
-
 .form-container #connexion-form {
-    width: 350px;
-    padding: 30px;
-    box-shadow: 0px 0px 1px rgb(0, 0, 0);
+  width: 350px;
+  padding: 30px;
+  box-shadow: 0px 0px 1px rgb(0, 0, 0);
 }
-
-.form-container #login-button-return {
-    cursor: pointer;
-}
-
 .form-container .connexion-container {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
-
 .form-container .information {
-    display: block;
-    margin-top: 15px;
-    text-align: center;
+  display: block;
+  margin-top: 15px;
+  text-align: center;
 }
-
 .form-container .connexion-logo {
-    width: 150px;
-    margin-bottom: 40px;
-}
+  width: 150px;
+  margin-bottom: 40px;
+}/*# sourceMappingURL=style.css.map */
