@@ -1,5 +1,17 @@
 console.log("conversionjson file");
 
+var geojsonFeature = {
+    "type": "Feature",
+    "properties": {
+        "name": "Coors Field",
+        "amenity": "Baseball Stadium",
+        "popupContent": "This is where the Rockies play!"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-104.99404, 39.75621]
+    }
+};
 
 var jsonStructure = {
     "executionTime": "2016-08-30 12:27:40 PM",
@@ -103,3 +115,4 @@ for (i = 0; i < json.stationBeanList.length; i++) {
 console.log(geojson);
 document.getElementById('json').innerHTML = JSON.stringify(json, null, 2);
 document.getElementById('geojson').innerHTML = JSON.stringify(geojson, null, 2);
+L.geoJSON(geojsonFeature).addTo(map);
