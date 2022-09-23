@@ -56,9 +56,10 @@
             if ($conn->connect_error) {
                  die("Connection failed: " . $conn->connect_error);
             }*/
-
+            $id = $_POST['numeroColisInput']; 
             // requête pour aller chercher les données du colis
-            $sql = "SELECT * FROM Packages WHERE id = 1"; 
+            $sql = "SELECT * FROM Packages WHERE num_pkg = '$id'";
+            //echo $sql; 
             //$result = $conn->query($sql);
              $result = mysqli_query($conn, $sql);
 
@@ -474,13 +475,14 @@
     var celsius = <?php  echo json_encode($tempArrayIn); ?>;
     var fahrenheit = <?php  echo json_encode($tempArrayOut); ?>;
     //var tempGlobalInfos = <?php  echo json_encode($tempInfos); ?>; // OJECT !
-    
+    var minmax = <?php  echo json_encode($userInfos); ?>;
+    console.log(minmax);
     //console.log(tempGlobalInfos[0]);
     //console.log(arraytempGlobalInfos[0][0]);
     //var tempGlobalInfosParsed = JSON.parse(arraytempGlobalInfos);
     
     //console.Log(JSON.parse(tempGlobalInfos[0]));
-    console.log(celsius);
+    //console.log(celsius);
     //console.log(typeof tempGlobalInfos);
     //onsole.log(tempGlobalInfosParsed);
 
@@ -500,7 +502,14 @@
             borderColor: 'rgb(005, 99, 132)',
             backgroundColor: 'rgb(005, 99, 132)',
             yAxisID: 'y1',
-        }
+        }/*,
+        {
+            label: 'Temp Min & Max',
+            data: minmax,
+            borderColor: 'rgb(005, 99, 132)',
+            backgroundColor: 'rgb(005, 99, 132)',
+            yAxisID: 'y1',
+        }*/
         ]
     };
 
