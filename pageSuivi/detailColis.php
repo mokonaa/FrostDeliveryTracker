@@ -39,6 +39,7 @@
             $tempArrayIn = [];
             $tempArrayOut = [];
             $tempInfos = []; 
+            $DateArray=[];
             $tempPositionColis = []; 
 
         
@@ -107,11 +108,12 @@
                             // $j += 66;
                             //array_push($tempArrayIn, $chaineADecoderObject->{'tempIn'});
                             // array_push($tempArrayOut, $chaineADecoderObject->{'tempOut'});
-                            /*var_dump($testData[$i]);
-                            echo ($testData[$i]->{'tempIn'});
+                            // var_dump($testData[$i]);
+                            /*echo ($testData[$i]->{'tempIn'});
                             echo "<br> hhhhhhhhhhh";*/
                             array_push($tempArrayIn, $testData[$i]->{'tempIn'});
                             array_push($tempArrayOut, $testData[$i]->{'tempOut'});
+                            array_push($DateArray, $testData[$i]->{'date'});
                          }
                          //var_dump($jObj);
                          //echo "balbalbalblaalblaa totototo";
@@ -119,7 +121,7 @@
                           //  echo 'OUT';
                         // echo $jObj->{'tempOut'}; 
 
-
+                        
                          array_push($tempInfos, $row["data"]);
                     
                     }
@@ -128,7 +130,7 @@
                 echo "0 results";
             }
             //$conn->close();
-
+            //var_dump($DateArray);
             /*echo "<br> RESULTS ARRAY IN <br>"; 
             var_dump($tempArrayIn);
             echo "<br> <br> RESULTS ARRAY OUT <br>"; 
@@ -451,6 +453,9 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
 
+    var dates = <?php  echo json_encode($DateArray); ?>;
+    // console.log(dates);
+
     const temps = [
         '20',
         '-15',
@@ -480,7 +485,7 @@
     //onsole.log(tempGlobalInfosParsed);
 
     const data = {
-        labels: temps,
+        labels: dates,
         datasets: [
         {
             label: 'In',
