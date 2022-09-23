@@ -1,3 +1,18 @@
+<?php
+
+    require('../php/connect.php');
+
+    //On démarre la session (possibilité ensuite d'utiliser $_SESSION)
+    // session_start();
+
+    //S'il n'y pas de SESSION ID, on retourne vers la page de connexion, cela veut dire que personne ne s'est connecté
+    /*if(!isset($_SESSION['ID']))
+    {
+        header('location: ../pageConnexion/connexion.php');
+    }*/
+
+?>
+
 <!doctype html>
 <html lang="fr">
     <head>
@@ -16,34 +31,44 @@
 
         <?php 
             //TODO mettre les identifiants propre à l'hébergement 
-            $servername = 'localhost';
+            /*$servername = 'localhost';
             $username = 'root';
             $password = 'root';
-            $dbname = "frost"; 
+            $dbname = "frost"; */
             $userInfos = [];
             $tempArrayIn = [];
             $tempArrayOut = [];
             $tempInfos = []; 
             $tempPositionColis = []; 
 
+        
+
+            // Détection d'erreur bdd
+            if(mysqli_connect_error())
+            {
+                echo "<script>alert('Non connecté à la BDD.');</script>";
+            }
+
             // Create connection
-            $conn = new mysqli($servername, $username, $password, $dbname);
+            /*$conn = new mysqli($servername, $username, $password, $dbname);
             // Check connection
             if ($conn->connect_error) {
                  die("Connection failed: " . $conn->connect_error);
-            }
+            }*/
 
             // requête pour aller chercher les données du colis
-            $sql = "SELECT * FROM Packages WHERE id = 14"; 
-            $result = $conn->query($sql);
+            $sql = "SELECT * FROM Packages WHERE id = 336"; 
+            //$result = $conn->query($sql);
+             $result =mysqli_query($conn, $sql);
+
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
-                    // var_dump($row);
+                    //var_dump($row);
                     // echo "id: " . $row["id"]."<br>";
                     array_push($userInfos, $row);
                     // var_dump($row);
                     if (isset($row["data"])) {
-                         // var_dump($row["data"]);
+                          //var_dump($row["data"]);
                          // var_dump(json_decode($row["data"], true));
 
                          //echo(substr($row["data"], 0, 65)); 
@@ -78,26 +103,27 @@
             } else {
                 echo "0 results";
             }
-            $conn->close();
+            //$conn->close();
 
-            echo "<br> RESULTS ARRAY IN <br>"; 
+            /*echo "<br> RESULTS ARRAY IN <br>"; 
             var_dump($tempArrayIn);
             echo "<br> <br> RESULTS ARRAY OUT <br>"; 
-            var_dump($tempArrayOut);
+            var_dump($tempArrayOut);*/
 
 
 
 
             // Create connection
-            $conn2 = new mysqli($servername, $username, $password, $dbname);
+            // $conn2 = new mysqli($servername, $username, $password, $dbname);
+
             // Check connection
-            if ($conn2->connect_error) {
+            /*if ($conn2->connect_error) {
                 // die("Connection failed: " . $conn->connect_error);
-            }
+            }*/
 
             // requête pour aller chercher les données du colis
             $sqlPosition = "SELECT * FROM Hotspots;"; 
-            $resultPosition = $conn2->query($sqlPosition);
+            $resultPosition = mysqli_query($conn,$sqlPosition);
 
             if ($resultPosition->num_rows > 0) {
             // output data of each row
@@ -112,7 +138,6 @@
                 echo "0 results";
             }
 
-            $conn2->close();
             // var_dump($tempPositionColis);
             //var_dump($userInfos);
             //echo "<br>";
@@ -153,7 +178,7 @@
             <div id='containerInfos'>
                 <div class="infos">
                     <div class="singleInfo">
-                        <p>Numéro de colis (ID) </p>
+                        <p class='subtitle'>Numéro de colis (ID) </p>
                         <p><?php echo $userInfos[0]['id'] ?></p>
                     </div>
                     <div>
@@ -195,7 +220,7 @@
 
 
 <script>
-    var map = L.map('map').setView([48.86004350462898, 2.2978489601227094], 15);
+    var map = L.map('map').setView([48.86004350462898, 2.2978489601227094], 11);
     var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '© OpenStreetMap'
@@ -222,7 +247,7 @@
         geojson.features.push({
             "geometry": {
                 "type": "Point",
-                "coordinates": [jsonStructure.colis[i].positionColisAltitude, jsonStructure.colis[i].positionColisLongitude]
+                "coordinates": [jsonStructure.colis[i].positionColisLongitude, jsonStructure.colis[i].positionColisAltitude]
             },
             "type": "Feature",
             "id": i,
