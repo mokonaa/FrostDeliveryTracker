@@ -1,4 +1,4 @@
-q<?php
+<?php
 
     require('../php/connect.php');
 
