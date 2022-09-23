@@ -57,9 +57,9 @@
             }*/
 
             // requête pour aller chercher les données du colis
-            $sql = "SELECT * FROM Packages WHERE id = 336"; 
+            $sql = "SELECT * FROM Packages WHERE id = 1"; 
             //$result = $conn->query($sql);
-             $result =mysqli_query($conn, $sql);
+             $result = mysqli_query($conn, $sql);
 
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
@@ -68,7 +68,14 @@
                     array_push($userInfos, $row);
                     // var_dump($row);
                     if (isset($row["data"])) {
-                          //var_dump($row["data"]);
+                          // var_dump($row["data"]);
+                          $testData = json_decode($row["data"]);
+                          /*echo "<br> <br>";
+                          var_dump($testData[1]);
+                          echo "<br> IN <br>";
+                          echo($testData[0]->{'tempIn'});*/ 
+
+
                          // var_dump(json_decode($row["data"], true));
 
                          //echo(substr($row["data"], 0, 65)); 
@@ -79,15 +86,32 @@
                          $chaineADecoder = ""; 
                          // echo "<br> SUBTRING <br>";
                          // boucle pour chercher les temps in et out 
-                         for ($i=0; $i<10; $i++) {
+                        //  for ($i=0; $i<10; $i++) {
+                        //     // echo "j value ".$j."<br>";
+                        //     $chaineADecoder = substr($row["data"], $j, 65); 
+                        //     // echo $chaineADecoder;
+                        //     $chaineADecoderObject = json_decode($chaineADecoder);
+                        //     // var_dump($chaineADecoderObject);
+                        //     $j += 66;
+                        //     array_push($tempArrayIn, $chaineADecoderObject->{'tempIn'});
+                        //     array_push($tempArrayOut, $chaineADecoderObject->{'tempOut'});
+                        //  }
+
+
+                        for ($i=0; $i<count($testData); $i++) {
                             // echo "j value ".$j."<br>";
-                            $chaineADecoder = substr($row["data"], $j, 65); 
+                            // $chaineADecoder = substr($row["data"], $j, 65); 
                             // echo $chaineADecoder;
-                            $chaineADecoderObject = json_decode($chaineADecoder);
+                            // $chaineADecoderObject = json_decode($chaineADecoder);
                             // var_dump($chaineADecoderObject);
-                            $j += 66;
-                            array_push($tempArrayIn, $chaineADecoderObject->{'tempIn'});
-                            array_push($tempArrayOut, $chaineADecoderObject->{'tempOut'});
+                            // $j += 66;
+                            //array_push($tempArrayIn, $chaineADecoderObject->{'tempIn'});
+                            // array_push($tempArrayOut, $chaineADecoderObject->{'tempOut'});
+                            /*var_dump($testData[$i]);
+                            echo ($testData[$i]->{'tempIn'});
+                            echo "<br> hhhhhhhhhhh";*/
+                            array_push($tempArrayIn, $testData[$i]->{'tempIn'});
+                            array_push($tempArrayOut, $testData[$i]->{'tempOut'});
                          }
                          //var_dump($jObj);
                          //echo "balbalbalblaalblaa totototo";
