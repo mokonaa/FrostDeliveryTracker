@@ -34,7 +34,7 @@
             }
 
             // requête pour aller chercher les données du colis
-            $sql = "SELECT * FROM Packages;"; 
+            $sql = "SELECT * FROM Packages WHERE id = 14"; 
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
