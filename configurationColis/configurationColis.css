@@ -6,19 +6,22 @@
   border-bottom: 2px solid var(--color-blue);
   padding-bottom: 10px;
 }
+
 .form-container {
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: var(--fw-light);
-  width: 100vw;
+  width: 100%;
   padding: 150px 0;
 }
+
 .form-container label {
   display: block;
   margin-bottom: 5px;
   color: var(--color-blue);
 }
+
 .form-container input {
   width: 100%;
   outline: none;
@@ -27,9 +30,11 @@
   padding-bottom: 5px;
   border-bottom: 1px solid var(--color-grey);
 }
+
 .form-container input:focus {
   border-bottom-color: var(--color-blue);
 }
+
 .form-container button {
   display: block;
   margin: 0 auto;
@@ -41,11 +46,13 @@
   cursor: pointer;
   transition: all 0.2s;
 }
+
 .form-container button:hover {
   color: var(--color-blue);
   background-color: transparent;
   border: 1px solid var(--color-blue);
 }
+
 .form-container #arduino {
   width: 100%;
   border: none;
@@ -53,25 +60,33 @@
   background-color: transparent;
   padding-bottom: 5px;
 }
+
 .form-container #arduino:focus {
   border-bottom-color: var(--color-blue);
 }
+
 .form-container #configuration-form {
   width: 350px;
   padding: 30px;
   box-shadow: 0px 0px 1px rgb(0, 0, 0);
 }
+
 .form-container .configuration-container {
   margin-bottom: 30px;
 }
+
 .form-container .temperature {
   width: 130px;
 }
+
 .form-container .temperature-title {
   color: var(--color-blue);
   margin-bottom: 5px;
 }
+
 .form-container .temperature-container {
   display: flex;
   justify-content: space-between;
-}/*# sourceMappingURL=configurationColis.css.map */
+}
+
+/*# sourceMappingURL=configurationColis.css.map */

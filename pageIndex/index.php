@@ -1,7 +1,7 @@
 <?php
     require('../php/connect.php');
     // session_start();
-    $numColis;
+    // $numColis;
 ?>
 <!DOCTYPE html>
 <html lang="fr">
