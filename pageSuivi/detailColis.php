@@ -130,8 +130,7 @@
                 echo "0 results";
             }
             //$conn->close();
-            echo "BZBDBZFHOEHFLZ";
-            var_dump($DateArray);
+            //var_dump($DateArray);
             /*echo "<br> RESULTS ARRAY IN <br>"; 
             var_dump($tempArrayIn);
             echo "<br> <br> RESULTS ARRAY OUT <br>"; 
@@ -455,7 +454,7 @@
 <script>
 
     var dates = <?php  echo json_encode($DateArray); ?>;
-    console.log(dates);
+    // console.log(dates);
 
     const temps = [
         '20',
