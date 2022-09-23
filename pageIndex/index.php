@@ -21,7 +21,7 @@
             <p>Garder un oeil sur l'état et la localisation de votre colis.<br>Vous n'avez qu'à rentrer le numéro
         de votre colis et vous serez redirigés vers la page adaptée.</p>
             <div class="accueil-button">
-                <form method="POST" onsubmit="return;">
+                <form id="suiviColis" name="suiviColis" method="POST" action="../pageSuivi/detailColis.php" onsubmit="return;">
                     <input type="text" placeholder="n° de colis" name="numeroColisInput" required>
                     <button name="numeroColisButton">Suivre mon colis</button>
                 </form>
@@ -83,7 +83,7 @@
             $result = mysqli_query($conn, "SELECT * FROM packages WHERE num_pkg = '".$numColis."'");
             if(mysqli_num_rows($result)) {                
                 echo '<script language="JavaScript" type="text/javascript">
-                window.location.href = "../pageSuivi/detailColis.php";
+                document.forms["suiviColis"].submit();
                 </script>';
 
             } else {
