@@ -1,9 +1,9 @@
 <?php   
 
-    $host = "localhost";
-    $user = "root";
-    $pass = "";
-    $base = "testbdd";
+    $host = "192.168.117.77:8889";
+    $user = "rilbo";
+    $pass = "gX[fq!hPcaxgYlSw";
+    $base = "FDT";
 
     $conn = mysqli_connect($host,$user,$pass,$base);
 

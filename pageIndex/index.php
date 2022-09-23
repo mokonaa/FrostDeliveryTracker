@@ -80,7 +80,7 @@
         $numColis = $_POST['numeroColisInput'];
         if(!empty($numColis)){
 
-            $result = mysqli_query($conn, "SELECT * FROM packages WHERE tracking_number = '".$numColis."'");
+            $result = mysqli_query($conn, "SELECT * FROM packages WHERE num_pkg = '".$numColis."'");
             if(mysqli_num_rows($result)) {                
                 echo '<script language="JavaScript" type="text/javascript">
                 window.location.href = "../pageSuivi/detailColis.php";
