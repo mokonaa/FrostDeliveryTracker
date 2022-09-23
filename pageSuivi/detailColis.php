@@ -59,7 +59,7 @@
             $id = $_POST['numeroColisInput']; 
             // requête pour aller chercher les données du colis
             $sql = "SELECT * FROM Packages WHERE num_pkg = '$id'";
-            echo $sql; 
+            //echo $sql; 
             //$result = $conn->query($sql);
              $result = mysqli_query($conn, $sql);
 
