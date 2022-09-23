@@ -13,15 +13,15 @@
         justify-content: center;
         align-items: center;
         font-weight: var(--fw-light);
-        width: 100vw;
+        width: 100%;
         padding: 150px 0;
-    
+
         label {
             display: block;
             margin-bottom: 5px;
             color: var(--color-blue);
         }
-    
+
         input {
             width: 100%;
             outline: none;
@@ -29,12 +29,12 @@
             font-size: 14px;
             padding-bottom: 5px;
             border-bottom: 1px solid var(--color-grey);
-    
+
             &:focus {
                 border-bottom-color: var(--color-blue);
             }
         }
-    
+
         button {
             display: block;
             margin: 0 auto;
@@ -45,7 +45,7 @@
             background-color: var(--color-blue);
             cursor: pointer;
             transition: all 0.2s;
-    
+
             &:hover {
                 color: var(--color-blue);
                 background-color: transparent;
@@ -64,25 +64,25 @@
                 border-bottom-color: var(--color-blue);
             }
         }
-    
+
         #configuration-form {
             width: 350px;
             padding: 30px;
             box-shadow: 0px 0px 1px rgb(0, 0, 0);
         }
-    
+
         .configuration-container {
             margin-bottom: 30px;
         }
-    
+
         .temperature {
             width: 130px;
-    
+
             &-title {
                 color: var(--color-blue);
                 margin-bottom: 5px;
             }
-            
+
             &-container {
                 display: flex;
                 justify-content: space-between;

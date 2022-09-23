@@ -55,17 +55,20 @@
         {
             // on enregistre la requete qui cherche un compte existant dans la bdd puis l'execute
             $query = "SELECT * FROM `users` WHERE `name`='$_POST[identifiant]' AND `password`='$_POST[motdepasse]'";
-            $result = mysqli_query($conn, $query);
+            $tmp = mysqli_query($conn, $query);
+            $result = mysqli_fetch_all($tmp, MYSQLI_ASSOC);
 
             //si on trouve une ligne qui correspond, on démarre une session et "crée" un ID puis redirection
-            if(mysqli_num_rows($result)==1)
+            if($result)
             {
                 session_start();
-                print_r($result);
-                // $queryEntreprise = "SELECT name FROM compagnies, users WHERE compagnies.id = ";
-                // $_SESSION['ENTREPRISE']=$nomEntreprise;
+                $companyId = $result[0]['id_compagny'];
+                $_SESSION['ID'] = $companyId;
                 header("location: ../pageIndex/index.php");
             }
+
+            
+
             //sinon on signale que le mdp n'est pas bon
             else
             {
